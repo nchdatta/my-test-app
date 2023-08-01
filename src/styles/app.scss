@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+
+// Scrollbar Design 
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E5E7E9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #95A5A6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #717D7E;
+}
+
+.sidebar {
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.rbc-calendar {
+  min-height: 600px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.rad-grad {
+  border-radius: 10px !important;
+  box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -4px !important;
+}
+
+.shadow {
+  box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -4px !important;
+}

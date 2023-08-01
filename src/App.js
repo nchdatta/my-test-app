@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Routes from "./routes";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async"
+import { Toaster } from "react-hot-toast";
+import { ProvideAuth } from "./hooks/useAuth";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <HelmetProvider>
+            <BrowserRouter>
+                <Toaster
+                    position="top-right"
+                    toastOptions={
+                        {
+                            duration: 3000
+                        }
+                    }
+                    reverseOrder={false} />
+                <ProvideAuth>
+                    <Routes />
+                </ProvideAuth>
+            </BrowserRouter>
+        </HelmetProvider>
+    );
 }
 
 export default App;
